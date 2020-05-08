@@ -1,10 +1,11 @@
 ### Mine: projects for curiosity and fun :octocat:
 
-This repo is for not conected projects, just projects for know more about\
+In this repo you'll find no conected projects, just projects for know more about\
 something or just curious application, geek projects or whatever code that\
 I found great to relax.
 
 ##### [Ex-Machina](https://github.com/marianaplazas/mine/tree/master/Ex-Machina)
-This is the code that use Caleb to decrypt the Bluebook's code\
-and a brief readme thar explains the algorithms used to crack the\
-code and thecurious anwser of the code.
+Here is the code used by Caleb in the movie Ex Machina to decrypt\
+the Nathan's code, also there is a readme that explains a little bit\
+about the algorithms used in the code with the anwser and some personal\
+comments about the curious anwser.
