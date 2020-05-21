@@ -16,8 +16,8 @@ def monedita_sueca(floor,ceiling, games):
 def add_games():
 	games = []
 	while (True):
-		i = (input("Hi add a new game: "))
-		if (i == "Stop"):
+		i = (input("Hi!, add a new game: "))
+		if (i == "Stop" or i == "stop"):
 			break
 		else:
 			games.append(i)
