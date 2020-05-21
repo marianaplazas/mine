@@ -1,0 +1,1 @@
+Hello my dear, I finish it! sorry for the wait you know I love u, now if you want to stop adding games to the list jus type Stop. I really want to play so I'll be waiting for you.
