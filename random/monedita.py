@@ -11,7 +11,7 @@ def monedita_sueca(floor,ceiling, games):
 		print("There's no so many games!")
 	else:
 		position = (random.randint(floor, ceiling))
-		print(games[position])
+		print("And the chosen one is: " + games[position])
 
 def add_games():
 	games = []
