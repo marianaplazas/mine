@@ -5,13 +5,20 @@ import random
 
 def monedita_sueca(floor,ceiling, games):
 	max = len(games)
-	if (floor < 0):
-		print("Be serious")
-	elif (ceiling > max):
-		print("There's no so many games!")
+	first = (random.randint(floor, ceiling))
+	second = (random.randint(floor, ceiling))
+	if (first > second):
+		position = first / second 
+	elif (second > first):
+		position = second / first
 	else:
-		position = (random.randint(floor, ceiling))
-		print("And the chosen one is: " + games[position])
+		position = 0
+	
+	while(position > max):
+		position = position - 2
+		
+	position = int(position)
+	print("And the chose one is: " + games[(position)])
 
 def add_games():
 	games = []
