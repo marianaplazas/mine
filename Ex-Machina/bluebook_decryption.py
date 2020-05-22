@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 # Bluebook code decryption
 
@@ -33,7 +33,7 @@ def prime(n,x):
 
 x = sieve(10000)
 
-code = [1206,301,304,5]
+code = [1206,301,384,5]
 key = [1,1,2,2]
 
 sys.stdout.write("".join(chr(i) for i in [73,83,66,78,32,61,32]))
