@@ -1,6 +1,6 @@
 #### Before starting...
 
-I tried to be as faithful as possible to the original code so i keeped the coments in the code, I just modify two parts, first the shebang to run the code in local and the function int in the range (n, **int**(n/2)) because without this the code in python 3.5.2 collapse.
+I tried to be as faithful as possible to the original code so I keep the comments in the code, I just modify two parts, first the shebang to run the code in local and the function int in the range (n, **int**(n/2)) because without this the code in python 3.5.2 collapse. Also I tried to be as clear as possible so this explanation is intended to be understood by people who are starting in the code or by non-programmers so it could be redundant and is intentional. I hope that you enjoy it
 
 ## Algorithm: :mag:
 
@@ -25,9 +25,30 @@ Also here is a gif for more clarity:
 Well so beautiful but we only see the abstract idea now the question is how is the algorithm implemented in the code? before answe, if you feel that you don't have too clear the algorithm here is a link to a short, clear and visual explanation of it [Khan Academy](https://es.khanacademy.org/computing/computer-science/cryptography/comp-number-theory/v/sieve-of-eratosthenes-prime-adventure-part-4) 
 
 
-## All about the code: :octocat:
+## All about the code: ::octocat::
 
- first we declare an array of booleans and then we set all the array to true indexed by integers 2 to n. But wait, what it means for probably non programmers or beginners that for chance arrives here? (well just for clarity I consider myself as a beginner and this as an excersice to practice and relax my mind) back to the question that means that you'll need a list of ones and zeros, the list to store in order and zeros and ones because they are the boolean values.  
+The code of Caleb is divide in 3 parts two of theme are functions created by himself and you can reconigze it because at first are declare with the keyword def, and the third is the implemantation of the functions to get and print the code. So we start with some basic points, if you don't know a lot of programming don't worry the goal is that you undrestand the general idea of how the program works you don't need to undrestand all you see at first. We are gona go trought the functions first and look line by line what does the code.
+
+### Sieve:
+
+Yeah this is the implemantation of the algorithm of Erathostenes, and is all the blockcode between the 7 and the 19 lines and if we pay attention Caleb call this function in the 34 line, take a look and you'll see this:
+
+`x = sieve(10000)`
+
+So this line in words says, apply the function to the number 10000 and asing the result in a variable call x so if x stores the return of the operation we can see what it stores use a simple print, but because we don't know what is gonna to print just let me try with a smallest number like 10, so I said
+
+```python
+x = sieve(10) #asing the result in x
+print(x) #show me whatevers x have
+```
+The phrases that starts with # are coments in the code. Above the two imagine there is the blockcode of sieve. Then I run my code and in the screen I saw this
+
+`[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]`
+
+Wait the algorithm must tell me the prime numbers given a limit, why I see just 0 and 1?
+Well first this is called a list or an array and is a data structure where you store as its name says data, this data are Boolean values and the Boolean values are just True or False that are represent by ones and zeros. and if we take a look closer actually the code and the algorithm is working, they tell us the primes.  
+
+first we declare an array of booleans and then we set all the array to true indexed by integers 2 to n. But wait, what it means for probably non programmers or beginners that for chance arrives here? (well just for clarity I consider myself as a beginner and this as an excersice to practice and relax my mind) back to the question that means that you'll need a list of ones and zeros, the list to store in order and zeros and ones because they are the boolean values.  
 ```python
 # hello I'm a comment and this is an array of booleans:
 x = [0,1,0,1,1,0] 
