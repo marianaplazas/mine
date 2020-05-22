@@ -16,7 +16,7 @@ def monedita_sueca(floor,ceiling, games):
 	
 	while(position > max):
 		position = position - 2
-		
+
 	position = int(position)
 	print("And the chose one is: " + games[(position)])
 
@@ -31,7 +31,7 @@ def add_games():
 	return(games)
 
 games = add_games()
-if (len(games) < 0):
+if (len(games) == 0):
 	print("Your list games are empty")
 else:
 	floor = int(input("Tell me the min: "))
