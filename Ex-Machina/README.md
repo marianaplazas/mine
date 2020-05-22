@@ -16,7 +16,8 @@ then the three multiplies
 the four is marked so we skip it and goes to the 5 but if we see 5*5 is equal to 25 so we stop at this point but look the numbers, in this case 10, 15 and 20 are multiples of 25 but they are marked cause 10 is multiple of 2 and 5 is multiple of 3 and 20 is of 2. The next multiple of 5 is 25 but is out of our limit, the same happens with the seven and all the other unmarked numbers so for this point we have all the primes that's why we stop here.
 
 Also here is a gif for more clarity:
-![](Sieve_of_Eratosthenes_animation.gif.gif)
+
+![](Sieve_of_Eratosthenes_animation.gif)
 
 Well so beautiful but we only see the abstract idea now the question is how is the algorithm implemented in the code? before anwser if you feel that you don't have too clear the algorithm here is a link to a short, clear and visual explanation of it [Khan Academy](https://es.khanacademy.org/computing/computer-science/cryptography/comp-number-theory/v/sieve-of-eratosthenes-prime-adventure-part-4) 
 
