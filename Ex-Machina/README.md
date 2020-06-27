@@ -22,51 +22,51 @@ Also here is a gif for more clarity:
 
 ![](Sieve_of_Eratosthenes_animation.gif)
 
-Well so beautiful but we only see the abstract idea now the question is how is the algorithm implemented in the code? before answer, if you feel that you don't have too clear the algorithm here is a link to a short, clear and visual explanation of it [Khan Academy](https://es.khanacademy.org/computing/computer-science/cryptography/comp-number-theory/v/sieve-of-eratosthenes-prime-adventure-part-4) 
+Well so beautiful but we only see the abstract idea, now the question is how is the algorithm implemented in the code? before answer, if you feel that you don't have too clear the algorithm here is a link to a short, clear and visual explanation of it [Khan Academy](https://es.khanacademy.org/computing/computer-science/cryptography/comp-number-theory/v/sieve-of-eratosthenes-prime-adventure-part-4) 
 
 
 ## All about the code: :octocat:
 
-The code of Caleb is divide in 3 parts two of theme are functions created by himself and you can reconigze it because at first are declare with the keyword def, and the third is the implementation of the functions to get and print the code. So we start with some basic points, if you don't know a lot of programming don't worry the goal is that you undrestand the general idea of how the program works you don't need to undrestand all you see at first. We are gona go trought the functions first and look line by line what does the code.
+Caleb's code is divided into three parts two of theme are functions created by himself and you can recognize them because at first are declared with the keyword def, and the third is the implementation of the functions to get and print the code. So we start with some basic points, if you don't know a lot of programming don't worry the goal is that you understand the general idea of how the program works you don't need to understand all you see at first. We are gonna go through the functions first and look line by line what does the code.
 
 ### Sieve:
 
-Yeah this is the implemantation of the algorithm of Erathostenes, and is all the blockcode between the 7 and the 19 lines and if we pay attention Caleb call this function in the 34 line, take a look and you'll see this:
+Yeah this is the implementation of the algorithm of Eratosthenes, and is all the blockcode between the 7 and the 19 lines and if we pay attention Caleb to call this function in the 34 line, take a look and you'll see this
 
 `x = sieve(10000)`
 
-So this line in words says, apply the function to the number 10000 and asing the result in a variable call x so if x stores the return of the operation we can see what it stores just using a simple print (the language used in the program is Python), but because we don't know what is gonna to print just let me try with a smallest number like 10, so I said
+So this line in words says, apply the function to the number 10000 and assign the result in a variable call x so if x stores the return of the operation we can see what it stores just using a simple print, but because we don't know what is going to print just let me try with the smallest number like 10, so I said
 
 ```python
 x = sieve(10) #asing the result in x
 print(x) #show me whatevers x have
 ```
-The phrases that starts with # are coments in the code. Above the two imagine there is the blockcode of sieve. Then I run my code and in the screen I saw this
+The phrases that start with # are comments in the code. Above the two imagine there is the blockcode of the sieve. Then I run my code and on the screen I saw this:
 
 `[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]`
 
 Wait the algorithm must tell me the prime numbers given a limit, why I see just 0 and 1?
-Well first this is called a list or an array and is a data structure where you store as its name says data, this data are Boolean values and the Boolean values are just True or False that are represent by ones and zeros. and if we take a look closer actually the code and the algorithm is working, they tell us the primes numbers represent as ones and zeros for more clarity, each one or zeros is actually a number betwen 0 and 9 just as we can see below
+Well first this is called a list or an array and is a data structure where you store as its name says data, this data are Boolean values and the Boolean values are just True or False that are represented by ones and zeros. and if we take a look closer actually the code and the algorithm is working, they tell us the primes numbers represent as ones and zeros for more clarity, each one or zeros is actually a number between 0 and 9 just as we can see below
 
 ````python
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 [1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
 ````
-And if you notice the patern after is that all prime numbers are represent by ones and the rest are represent by 0, with the zero sincerely I don't find a explanation why Caleb take it as a prime number, so the algorithm does exactly what it supose to do, it marks the true values for the prime numbers and return the list with the marks, to know how the code do that just see a little bit closer line by line but with the example of n = 10 as we did before.
+And if you notice that the pattern afterwards is that all prime numbers are represented by ones and the rest are represented by 0, with zero I honestly can't find an explanation why Caleb takes it as a prime number, so the algorithm does exactly what it is supposed to do, mark the true values for the prime numbers and return the list with the marks, to know how the code does it we are going to look a little closer line by line, but with the example of n = 10 like we did before, but in this case the code is a little different to explain what happens in each iteration.
 
 ````python
 def sieve(n): #this is our first functión that return the list of zeros and ones
 '''
-Actually a function should comment like this
+Actually a function should be comment like this
 and the comment should say what the function does
-in this case we have a function named sieve that takes one 
-argument call n wich is the number that say how many or until what number
+in this case, we have a function named sieve that takes one 
+argument call n which is the number that says how many or until what number
 it will calculate the primes in this case n is going to be 10
 '''
 
     x = [1]*n # X is equal to a matrix of size n 
 	'''
-	in this case wich n is 10 this first line set a matrix full of ones of size n
+	in this case which n is 10 this first line set a list full of ones of size n
 	if we print it we see that in this point our list look like this
 	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 	'''
@@ -76,33 +76,18 @@ it will calculate the primes in this case n is going to be 10
 	[1, 0, 1, 1, 1, 1, 1, 1, 1, 1]
 	Because we count from 0 
 	'''
-
+	counter = 1 # Set a counter for knew the number of iterations 
     for i in range(2,int(n/2)):
 	# We set the counter i to 2 and while i is less than n divide 2 do the instructions below
-	'''
-	So in our first iteration i is equals to 2
-	'''
+		print("The value of i is {} in the iteration #{} in the for loop".format(i, counter))
+	 	counter += 1 # Count the iteration
         j = 2*i # set j equals to i multiply 2
-		'''
-		and here j is equals to 2 multiply by i wich is 2 so j is 4
-		'''
+		print("The value of j is {} in the iteration #{} in the for loop".format(j, counter - 1))
         while j < n: 
 		# this is a nested loop while j is less than n we do the next instructions
-		'''
-		here comes something intersting this while is faster than the for loop 
-		so j is 4 and 4 is less than 10 so entry in the loop
-		''' 
             x[j] = 0 # here we set the non prime numbers to 0, x in the position j is equals to 0
-			'''
-			So actually the loop unmark the non prime numbers here j is 4 and the list in the position 4 is unmarked or set to 0 and our list looks in this point like this
-			[1, 0, 1, 1, 0, 1, 1, 1, 1, 1]
-			wich is equivalent to this
-			[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-			'''
             j = j+i # and we sum 1 to j
-			'''
-			and here j is 4+1 so is 5
-			'''
     return x # Return the list
 ````
-This is a little bit tricky even looking line by line it could be confuse wha
+So if you notice both prints are outside of the while loop and this is intentional to see how the for loop is working and the value of j and i especially j because it's the variable that in the while loop determines the position in the array where the zeros are assing. if we run this code the result is this 
+
